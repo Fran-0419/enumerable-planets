@@ -8,7 +8,18 @@
 
 </head>
 <body>
-<h1>Pick a planet:</h1>
+    <h1>Pick a planet:</h1>
+    <table th:each="myPlanets: ${planets}">
+        <thead>
+            <tr>
+                <th th:text="${myPlanets.name}">Name</th>
+            </tr>
+        </thead>
+        <tr>
+            <td th:text="${myPlanets.yearLength }+ ' Earth days in one year.'"></td>
+        </tr>
+
+    </table>
 
 </body>
 </html>
